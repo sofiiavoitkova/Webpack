@@ -14,10 +14,10 @@ module.exports = {
         __dirname,
         "node_modules/.cache/eslint-webpack-plugin/.eslintcache"
       ),
-      overrideConfigFile: path.resolve(__dirname, "eslint.config.js"), // Use overrideConfigFile
+      overrideConfigFile: path.resolve(__dirname, "eslint.config.js"),
       extensions: ["js"],
       exclude: "node_modules",
-      fix: false, // If you want ESLint to fix issues automatically
+      fix: false,
       formatter: "stylish",
       lintDirtyModulesOnly: false,
       threads: false,
