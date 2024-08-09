@@ -1,4 +1,5 @@
 const path = require("path");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -6,17 +7,15 @@ module.exports = {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
   },
-};
-
-const ESLintPlugin = require("eslint-webpack-plugin");
-
-module.exports = {
   plugins: [
     new ESLintPlugin({
       cache: true,
-      cacheLocation: "node_modules/.cache/eslint-webpack-plugin/.eslintcache",
+      cacheLocation: path.resolve(
+        __dirname,
+        "node_modules/.cache/eslint-webpack-plugin/.eslintcache"
+      ),
       configType: "eslintrc",
-      eslintPath: "eslint",
+      eslintPath: require.resolve("eslint"),
       extensions: ["js"],
       exclude: "node_modules",
       resourceQueryExclude: [],
