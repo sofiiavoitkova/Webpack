@@ -14,7 +14,7 @@ module.exports = {
         __dirname,
         "node_modules/.cache/eslint-webpack-plugin/.eslintcache"
       ),
-      overrideConfigFile: path.resolve(__dirname, "eslint.config.js"),
+      overrideConfigFile: path.resolve(__dirname, ".eslintrc.js"),
       extensions: ["js"],
       exclude: "node_modules",
       fix: false,
